@@ -1,0 +1,17 @@
+server.port: 9966
+spring.profiles: default
+demo.security.jwt:
+  tokenExpirationTime: 15 # Number of minutes
+  refreshTokenExpTime: 60 # Minutes
+  tokenIssuer: http://svlada.com
+  tokenSigningKey: xm8EV6Hy5RMFK4EEACIDAwQus
+  
+spring.datasource:
+  url: "jdbc:mysql://localhost:3306/myDatabase?autoReconnect=true&useSSL=false"
+  driverClassName: com.mysql.jdbc.Driver
+  username: root
+  password: root
+  data: "import.sql"
+spring.jpa:
+  database-platform: org.hibernate.dialect.MySQL5Dialect
+spring.h2.console.enabled: true
